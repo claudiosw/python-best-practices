@@ -6,5 +6,10 @@
         "**/*.pyc": {"when": "$(basename).py"},
         "**/__pycache__": true,
         "**/*.pytest_cache": true,
+    },
+    "[python]": {
+        "editor.rulers": [
+            79
+        ]
     }
 }
