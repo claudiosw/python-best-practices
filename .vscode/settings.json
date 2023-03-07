@@ -1,6 +1,7 @@
 {
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": ["--max-line-length=79"],
     "files.exclude": {
         "**/*.pyc": {"when": "$(basename).py"},
         "**/__pycache__": true,
