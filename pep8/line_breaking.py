@@ -99,7 +99,7 @@ LONG_STRING = ("This is an example of a very long Python string. We can use "
                )
 
 
-# This is an example of a long string using f strings
+# This is an example of a long string using f-strings
 a_value = input()
 long_fstring = ("This is an example of a very long Python string. We can use "
                 f"parenthesis, and single or double quotes for that. {a_value}"
