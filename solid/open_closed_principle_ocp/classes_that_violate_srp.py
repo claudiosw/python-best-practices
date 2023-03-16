@@ -1,5 +1,5 @@
-""" This module has example of Open/Closed Principle in Python where Classes
-    DON'T follow the Single Responsibility Principle
+""" This module has an example of the Open/Closed Principle in Python where
+    classes DON'T follow the Single Responsibility Principle
 """
 
 
