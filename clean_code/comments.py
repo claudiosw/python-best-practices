@@ -26,9 +26,12 @@ def calculate_sale_price_good(cost_price):
 
 
 # Explain why the code was written this way
-# I decided to use this way because ...
+# I decided to use this approach because ...
 
 
+# You can write TODO comments to take note of things that should be done in
+# the future. However, you must organize yourself so that you can resolve the
+# issues and delete the comments.
 # Example of comment that we want to do in the future
 # This is to disable Pylint TODO error => pylint: disable=fixme
 # TODO: Add more examples here # pylint: disable=fixme
