@@ -12,7 +12,7 @@ DEFAULT_TAX = 10
 
 
 # This example show a method that could be smaller
-class ElectricCarLongVersion():
+class ElectricCarShortVersion():
     """ This is a class example to show naming best practices
     """
     def __init__(self, name, cost_price, imported) -> None:
