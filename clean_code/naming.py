@@ -43,6 +43,7 @@ def explode_word(word):
     """
     # Notice that the function is named as a verb.
     # Following PEP8, it's name uses lowercases and underscores.
-    # We could name character as i in loops. But character is probably clearer.
+    # The character could be named as i in loops. But naming it as character is
+    # probably clearer.
     for character in word:
         print(character)

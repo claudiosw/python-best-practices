@@ -16,7 +16,7 @@ class UserBad():
         self.name = name
 
     def save(self):
-        """ This method would send confirmation email
+        """ This method would send a confirmation email
         """
         print("Saving data into database")
 
@@ -28,7 +28,7 @@ class UserBad():
 # these has its own class and if we need an additional responsibility, we would
 # create a new class.
 class User():
-    """ This class is an example of Open/Closed Principle in Python
+    """ This class is an example of the Open/Closed Principle in Python
     """
     def __init__(self, username, name):
         self.username = username
@@ -36,7 +36,7 @@ class User():
 
 
 class UserDatabase():
-    """ This class is an example of Open/Closed Principle in Python
+    """ This class is an example of the Open/Closed Principle in Python
     """
     def save(self, user: User):
         """ This method would save data to the database

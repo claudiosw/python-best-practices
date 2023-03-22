@@ -1,4 +1,4 @@
-""" This module has examples of Single Responsibility Principle in Python
+""" This module has examples of the Single Responsibility Principle in Python
 """
 
 
@@ -26,7 +26,7 @@ class UserBad():
 # user properties and changing how the email is sent. Now, each of these has
 # its own class.
 class User():
-    """ This class is an example of Single Responsibility Principle in Python
+    """ This class is an example of the Single Responsibility Principle in Python
     """
     def __init__(self, username, email_address):
         self.username = username
@@ -36,7 +36,7 @@ class User():
 
 
 class Email():
-    """ This class is an example of Single Responsibility Principle in Python
+    """ This class is an example of the Single Responsibility Principle in Python
     """
     def __init__(self, email_address):
         self.email_address = email_address
