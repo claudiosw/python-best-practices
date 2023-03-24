@@ -5,6 +5,7 @@ This repository has examples to help developers understand and improve their Pyt
 Related to this, there is a series of Linkedin posts that will be a suitable complement:
 
 1. [Python Recommended coding practices - part 1: PEP8](https://www.linkedin.com/pulse/python-recommended-coding-practices-part-1-pep8-watanabe/) explains about PEP8, its name conventions, code layout and linters.
+2. [Python Recommended coding practices - part2: Clean Code](https://www.linkedin.com/pulse/python-recommended-coding-practices-part2-clean-code-watanabe/): In [this article](https://www.linkedin.com/pulse/python-recommended-coding-practices-part2-clean-code-watanabe/), I wrote about Python Clean Code practices.
 
 # Instalation
 
