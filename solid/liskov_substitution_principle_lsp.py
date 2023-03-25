@@ -27,6 +27,9 @@ class SonBadExample(Father):
 
 # On the other hand, the class below doesn't do polymorphism but creates a new
 # method which follows the Liskov Substitution Principle.
+# If you don’t know what polymorphism is, we did polymorphism in the previous
+# example when we overrided the method. This is, we redefine in the child class
+# a method (add) already defined in the parent class.
 class Son(Father):
     """ Example of a child class that follows the Liskov Substitution Principle
     """
