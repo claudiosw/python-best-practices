@@ -43,6 +43,9 @@ class ChefBadExample(EmployeeBadExample):
 # Those classes from now on follow the Interface Segregation Principle
 # Instead of having one abstract class for all employees, we divided them by
 # roles and the child class uses multiple inheritance.
+# If you don’t know what multiple inheritance is, the Chef class has multiple
+# inheritance as it has two parent classes. Chef class inherits the lead method
+# from the Leader class and the cook method from the Cook class.
 class Cook(ABC):
     """ An abstract class representing a cook (person who cooks)
     """
