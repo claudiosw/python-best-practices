@@ -36,8 +36,8 @@ class UseCaseBadExample():
 
 
 if __name__ == "__main__":
-    use_case = UseCaseBadExample()
-    use_case.run()
+    use_case_bad_example = UseCaseBadExample()
+    use_case_bad_example.run()
 
 
 # This is a loosely coupled example that follows the Dependency Inversion
