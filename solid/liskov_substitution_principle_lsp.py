@@ -19,7 +19,7 @@ class SonBadExample(Father):
     """ Example of a child class that violates the Liskov Substitution
         Principle
     """
-    def add(self, first: float, second: float) -> None:
+    def add(self, first: float, second: float) -> None: # type: ignore
         """ Do a calculation
         """
         print(first + second)
