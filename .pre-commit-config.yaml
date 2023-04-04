@@ -26,7 +26,8 @@ repos:
       - id: mypy
         name: mypy
         entry: "mypy ./"
-        language: python
+        language: system
+        pass_filenames: false
         # trigger for commits changing Python files
         types: [python]
         # use require_serial so that script
