@@ -8,6 +8,17 @@ Related to this, there is a series of Linkedin posts that will be a suitable com
 2. [Python Recommended coding practices - part 2: Clean Code](https://www.linkedin.com/pulse/python-recommended-coding-practices-part2-clean-code-watanabe/): In [this article](https://www.linkedin.com/pulse/python-recommended-coding-practices-part2-clean-code-watanabe/), I wrote about Python Clean Code practices.
 3. [Python Recommended coding practices - part 3: SOLID Principles](https://www.linkedin.com/pulse/python-recommended-coding-practices-part-3-solid-watanabe/): In [this article](https://www.linkedin.com/pulse/python-recommended-coding-practices-part-3-solid-watanabe/), I wrote about the SOLID principles with Python examples.
 
+Each folder of this project is related to one specific topic:
+* .vscode: This folder contain example of VSCode configuration.
+* clean_code: This folder contains examples for "Clean Code" principles.
+* documenting: This folder contains examples for code documentation.
+* pep8: This folder contains examples for PEP8 style guidelines.
+* solid: This folder contains examples for SOLID principles.
+* testing: This folder contains examples for testing, including Pytest examples and using mocking.
+* .gitignore: This file contain patterns for ignoring files and folders on your local computer to GitHub. 
+* .pre-commit-config.yaml: This file containes configuration for all the pre-commit tasks. 
+
+
 # Instalation
 
 ## On prompt, acess the directory that want to download the project
