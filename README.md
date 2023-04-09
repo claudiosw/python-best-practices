@@ -7,6 +7,7 @@ Related to this, there is a series of Linkedin posts that will be a suitable com
 1. [Python Recommended coding practices - part 1: PEP8](https://www.linkedin.com/pulse/python-recommended-coding-practices-part-1-pep8-watanabe/) explains about PEP8, its name conventions, code layout and linters.
 2. [Python Recommended coding practices - part 2: Clean Code](https://www.linkedin.com/pulse/python-recommended-coding-practices-part2-clean-code-watanabe/): In [this article](https://www.linkedin.com/pulse/python-recommended-coding-practices-part2-clean-code-watanabe/), I wrote about Python Clean Code practices.
 3. [Python Recommended coding practices - part 3: SOLID Principles](https://www.linkedin.com/pulse/python-recommended-coding-practices-part-3-solid-watanabe/): In [this article](https://www.linkedin.com/pulse/python-recommended-coding-practices-part-3-solid-watanabe/), I wrote about the SOLID principles with Python examples.
+4. [Testing in Python using Pytest and Mock](https://www.linkedin.com/pulse/testing-python-using-pytest-mock-claudio-shigueo-watanabe/): [In this article](https://www.linkedin.com/pulse/testing-python-using-pytest-mock-claudio-shigueo-watanabe/), I wrote about Pytest and Mock. I discussed basic use, fixtures, markers, parametrization and duration.
 
 Each folder of this project is related to one specific topic:
 * .vscode: This folder contain example of VSCode configuration.
