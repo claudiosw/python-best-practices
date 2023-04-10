@@ -30,8 +30,8 @@ def test_mock_function():
 class TestRunDice(unittest.TestCase):
     """ Tests for the run_dice function isolating it from random library
     """
-    # With @patch("testing.random"), we mock random from the testing.py file
-    # which is the file that the function run_dice is.
+    # With @patch("testing.mocking.random"), we mock random from the mocking.py
+    # file which is the file where the function run_dice is located.
     @patch("testing.mocking.random")
     # The mock_random parameter of the test_mock_function_with_dice method is
     # the name of the mock object we pass to the test method.
