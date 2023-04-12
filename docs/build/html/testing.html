@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>testing package &mdash; Python Best Practices 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Python Best Practices
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">testing package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-testing.conftest">testing.conftest module</a><ul>
+<li><a class="reference internal" href="#testing.conftest.fixture_product_1"><code class="docutils literal notranslate"><span class="pre">fixture_product_1()</span></code></a></li>
+<li><a class="reference internal" href="#testing.conftest.fixture_product_2"><code class="docutils literal notranslate"><span class="pre">fixture_product_2()</span></code></a></li>
+<li><a class="reference internal" href="#testing.conftest.product_fixture_list"><code class="docutils literal notranslate"><span class="pre">product_fixture_list()</span></code></a></li>
+<li><a class="reference internal" href="#testing.conftest.time_calculator"><code class="docutils literal notranslate"><span class="pre">time_calculator()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-testing.mocking">testing.mocking module</a><ul>
+<li><a class="reference internal" href="#testing.mocking.run_dice"><code class="docutils literal notranslate"><span class="pre">run_dice()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-testing.mocking_test">testing.mocking_test module</a><ul>
+<li><a class="reference internal" href="#testing.mocking_test.TestRunDice"><code class="docutils literal notranslate"><span class="pre">TestRunDice</span></code></a><ul>
+<li><a class="reference internal" href="#testing.mocking_test.TestRunDice.test_mock_function_with_dice"><code class="docutils literal notranslate"><span class="pre">TestRunDice.test_mock_function_with_dice()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#testing.mocking_test.test_mock_function"><code class="docutils literal notranslate"><span class="pre">test_mock_function()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-testing.pytesting">testing.pytesting module</a><ul>
+<li><a class="reference internal" href="#testing.pytesting.Product"><code class="docutils literal notranslate"><span class="pre">Product</span></code></a><ul>
+<li><a class="reference internal" href="#testing.pytesting.Product.id"><code class="docutils literal notranslate"><span class="pre">Product.id</span></code></a></li>
+<li><a class="reference internal" href="#testing.pytesting.Product.name"><code class="docutils literal notranslate"><span class="pre">Product.name</span></code></a></li>
+<li><a class="reference internal" href="#testing.pytesting.Product.price"><code class="docutils literal notranslate"><span class="pre">Product.price</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#testing.pytesting.add"><code class="docutils literal notranslate"><span class="pre">add()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-testing.pytesting_test">testing.pytesting_test module</a><ul>
+<li><a class="reference internal" href="#testing.pytesting_test.test_add"><code class="docutils literal notranslate"><span class="pre">test_add()</span></code></a></li>
+<li><a class="reference internal" href="#testing.pytesting_test.test_add_parametrize"><code class="docutils literal notranslate"><span class="pre">test_add_parametrize()</span></code></a></li>
+<li><a class="reference internal" href="#testing.pytesting_test.test_product_list"><code class="docutils literal notranslate"><span class="pre">test_product_list()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#module-testing">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python Best Practices</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">testing package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/testing.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="testing-package">
+<h1>testing package<a class="headerlink" href="#testing-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-testing.conftest">
+<span id="testing-conftest-module"></span><h2>testing.conftest module<a class="headerlink" href="#module-testing.conftest" title="Permalink to this heading"></a></h2>
+<p>This file has fixtures for the tests included in this directory</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="testing.conftest.fixture_product_1">
+<span class="sig-prename descclassname"><span class="pre">testing.conftest.</span></span><span class="sig-name descname"><span class="pre">fixture_product_1</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#testing.conftest.fixture_product_1" title="Permalink to this definition"></a></dt>
+<dd><p>Example of a fixture of one product</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="testing.conftest.fixture_product_2">
+<span class="sig-prename descclassname"><span class="pre">testing.conftest.</span></span><span class="sig-name descname"><span class="pre">fixture_product_2</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#testing.conftest.fixture_product_2" title="Permalink to this definition"></a></dt>
+<dd><p>Example of a fixture of another product</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="testing.conftest.product_fixture_list">
+<span class="sig-prename descclassname"><span class="pre">testing.conftest.</span></span><span class="sig-name descname"><span class="pre">product_fixture_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fixture_product_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fixture_product_2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#testing.conftest.product_fixture_list" title="Permalink to this definition"></a></dt>
+<dd><p>Example of a fixture composed of two other fixtures</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="testing.conftest.time_calculator">
+<span class="sig-prename descclassname"><span class="pre">testing.conftest.</span></span><span class="sig-name descname"><span class="pre">time_calculator</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#testing.conftest.time_calculator" title="Permalink to this definition"></a></dt>
+<dd><p>Example of an autouse fixture</p>
+</dd></dl>
+
+</section>
+<section id="module-testing.mocking">
+<span id="testing-mocking-module"></span><h2>testing.mocking module<a class="headerlink" href="#module-testing.mocking" title="Permalink to this heading"></a></h2>
+<p>This module has supporting code to demonstrate testing</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="testing.mocking.run_dice">
+<span class="sig-prename descclassname"><span class="pre">testing.mocking.</span></span><span class="sig-name descname"><span class="pre">run_dice</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#testing.mocking.run_dice" title="Permalink to this definition"></a></dt>
+<dd><p>Simulate a dice roll
+:returns: ‘Lucky’ or ‘Unlucky’</p>
+</dd></dl>
+
+</section>
+<section id="module-testing.mocking_test">
+<span id="testing-mocking-test-module"></span><h2>testing.mocking_test module<a class="headerlink" href="#module-testing.mocking_test" title="Permalink to this heading"></a></h2>
+<p>Tests to demonstrate testing.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="testing.mocking_test.TestRunDice">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testing.mocking_test.</span></span><span class="sig-name descname"><span class="pre">TestRunDice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#testing.mocking_test.TestRunDice" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TestCase</span></code></p>
+<p>Tests for the run_dice function isolating it from random library</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="testing.mocking_test.TestRunDice.test_mock_function_with_dice">
+<span class="sig-name descname"><span class="pre">test_mock_function_with_dice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mock_random</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#testing.mocking_test.TestRunDice.test_mock_function_with_dice" title="Permalink to this definition"></a></dt>
+<dd><p>Testing run_dice function</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="testing.mocking_test.test_mock_function">
+<span class="sig-prename descclassname"><span class="pre">testing.mocking_test.</span></span><span class="sig-name descname"><span class="pre">test_mock_function</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#testing.mocking_test.test_mock_function" title="Permalink to this definition"></a></dt>
+<dd><p>Test that a mock function is called</p>
+</dd></dl>
+
+</section>
+<section id="module-testing.pytesting">
+<span id="testing-pytesting-module"></span><h2>testing.pytesting module<a class="headerlink" href="#module-testing.pytesting" title="Permalink to this heading"></a></h2>
+<p>Example code to show Pytest features</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="testing.pytesting.Product">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">testing.pytesting.</span></span><span class="sig-name descname"><span class="pre">Product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">UUID</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">price</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#testing.pytesting.Product" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Class Product example</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testing.pytesting.Product.id">
+<span class="sig-name descname"><span class="pre">id</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">UUID</span></em><a class="headerlink" href="#testing.pytesting.Product.id" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testing.pytesting.Product.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">str</span></em><a class="headerlink" href="#testing.pytesting.Product.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="testing.pytesting.Product.price">
+<span class="sig-name descname"><span class="pre">price</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">float</span></em><a class="headerlink" href="#testing.pytesting.Product.price" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="testing.pytesting.add">
+<span class="sig-prename descclassname"><span class="pre">testing.pytesting.</span></span><span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#testing.pytesting.add" title="Permalink to this definition"></a></dt>
+<dd><p>Add two numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>number_1</strong> – First number.</p></li>
+<li><p><strong>number_2</strong> – Second number.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sum of two numbers.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-testing.pytesting_test">
+<span id="testing-pytesting-test-module"></span><h2>testing.pytesting_test module<a class="headerlink" href="#module-testing.pytesting_test" title="Permalink to this heading"></a></h2>
+<p>Tests restated to Pytest</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="testing.pytesting_test.test_add">
+<span class="sig-prename descclassname"><span class="pre">testing.pytesting_test.</span></span><span class="sig-name descname"><span class="pre">test_add</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#testing.pytesting_test.test_add" title="Permalink to this definition"></a></dt>
+<dd><p>Doing simple tests</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="testing.pytesting_test.test_add_parametrize">
+<span class="sig-prename descclassname"><span class="pre">testing.pytesting_test.</span></span><span class="sig-name descname"><span class="pre">test_add_parametrize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter_1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parameter_2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_result</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#testing.pytesting_test.test_add_parametrize" title="Permalink to this definition"></a></dt>
+<dd><p>Test example using parametrize feature of Pytest</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="testing.pytesting_test.test_product_list">
+<span class="sig-prename descclassname"><span class="pre">testing.pytesting_test.</span></span><span class="sig-name descname"><span class="pre">test_product_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_fixture_list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#testing.pytesting_test.test_product_list" title="Permalink to this definition"></a></dt>
+<dd><p>Test example using fixture</p>
+</dd></dl>
+
+</section>
+<section id="module-testing">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-testing" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Claudio Shigueo Watanabe.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
