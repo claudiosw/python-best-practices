@@ -25,7 +25,7 @@ repos:
     hooks:
       - id: mypy
         name: mypy
-        entry: "mypy ./"
+        entry: "mypy --exclude '(docs|venv)' ./ "
         language: system
         pass_filenames: false
         # trigger for commits changing Python files
@@ -35,4 +35,4 @@ repos:
         require_serial: true
         # print the number of files as a sanity-check
         verbose: true
-exclude: 'docs/.*'
+exclude: 'docs/.*|venv/.*'
