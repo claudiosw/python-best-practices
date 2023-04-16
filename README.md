@@ -49,3 +49,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 pre-commit install
 ```
+
+## If you need to regenerate the Docs, execute: (You may need to run “./make.bat html” on Windows)
+```
+sphinx-apidoc -f -o docs/source .
+make clean html
+make html
+```
+
+## Documentation
+You can see the documentation of this project generated for Sphinx in [here](https://claudiosw.github.io/python-best-practices/build/html/index.html).
