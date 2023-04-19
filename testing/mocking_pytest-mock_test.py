@@ -1,6 +1,7 @@
 """ In this file we have tests that use pytest-mock
 """
 from testing import mocking
+from testing.mocking import ExampleRepositoryInterface
 
 
 def test_mock_patch_function_with_dice(mocker):
@@ -35,3 +36,22 @@ def test_mock_patch_function_with_dice(mocker):
     # mock is doing behind the scene in a sane way.This problem only occurs
     # when you're mocking a module. Pylint correctly finds the type of the mock
     # if you're mocking a function, class or method.
+
+
+def test_create_example(mocker):
+    """ Example of a test passing a mock as a parameter
+    """
+    # Mocking the object
+    repository_mock = mocker.patch.object(
+        ExampleRepositoryInterface,
+        "create"
+    )
+    # Defining the result it will return
+    repository_mock.create.return_value = "Result Example created"
+    # Executing the test
+    use_case = mocking.CreateExampleUseCase(repository_mock)
+    result = use_case.execute("Name Example")
+    # Check if the mocked method of the object received the correct parameter
+    repository_mock.create.assert_called_once_with("Name Example")
+    # Check if the use case passed the result of the mocked object correctly
+    assert result == "Result Example created"
