@@ -11,7 +11,7 @@
         "**/*.pyc": {"when": "$(basename).py"},
         "**/__pycache__": true,
         "**/*.pytest_cache": true,
-        "**/docs": true
+        "**/venv": true
     },
     "[python]": {
         "editor.rulers": [
