@@ -2,3 +2,7 @@
 .pytest_cache
 venv
 .env
+
+# Sphinx documentation. Uncomment these if don't want to commit the build of Sphinx.
+# docs/_build
+# docs/build
